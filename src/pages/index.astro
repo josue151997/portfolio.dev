@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedInIcon from "../icons/LinkedInIcon.astro";
+import GithubIcon from "../icons/Github.astro";
+import SocialPill from "../components/SocialPill.astro";
+import MailIcon from "../icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import CodeIcon from "../icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import ProfileCheck from "../icons/ProfileCheck.astro";
+import AboutMe from "../components/AboutMe.astro";
+---
+
+<Layout title="Porfolio de Josué - Desarrollador y programador Web">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://avatars.githubusercontent.com/u/98853517?s=400&u=4b79dabdd5b36579a0c2eabb328f5e586ccae88d&v=4"
+        alt="Josue photo"
+      />
+      <h1
+        class="text-white text-3xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Josué <a
+          href="https://www.linkedin.com/in/josue-castro-326664218/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span class="text-yellow-200/90 opacity 80">2 años de experiencia.</span
+        >
+        <span class="text-blue-500/90 opacity-80"
+          >Full-Stack Web Developer y experto en automatización confiable con
+          Ansible.</span
+        >
+        <span class="text-red-300/90">De Quito, Ecuador 🇪🇨.</span>
+        <span class="opacity-100"
+          >Especializado el desarrollo de aplicaciones únicas.</span
+        >
+      </h2>
+      <nav class="flex gap-x-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/josue-castro-326664218/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/josue151997">
+          <GithubIcon class="size-4 md:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:josuec297@outlook.com">
+          <MailIcon class="size-6" />
+          josuec297@outlook.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ProfileCheck class="size-7" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
+</Layout>

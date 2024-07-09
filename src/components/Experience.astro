@@ -1,0 +1,43 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Twich",
+    company: "",
+    description: "",
+    link: "https://www.twitch.tv/stormragesoul15",
+  },
+  {
+    date: "January 2023 - November 2023",
+    title: "Information Security Analyst",
+    company: "Ivera.corp",
+    description:
+      "Ansible Automation Platform: Reduced deployment errors, agile implementation of security policies, continuous optimization of IT processes, proactive incident response, improved system recovery times, and ongoing cybersecurity training.",
+  },
+  {
+    date: "June 2023 - October 2023",
+    title: "Web Development for Children's Valley Childcare Center",
+    company: "Children's Valley Childcare Center",
+    description:
+      "Led the creation and launch of Children's Valley Child Development Center's website, enhancing user experience and strengthening the brand's digital presence at cichildrensvalley.com. • Advanced web analytics expertise.",
+  },
+  {
+    date: "January 2022",
+    title: "ISMAC PLANET",
+    company: "ISMAC",
+    description:
+      "Developed and optimized the ticket management application for ISMAC PLANET, enhancing user experience and system efficiency. Integrated ISMAC tickets and streamlined ticket purchasing and selling processes.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
